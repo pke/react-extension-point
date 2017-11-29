@@ -1,3 +1,7 @@
+[![Travis](https://img.shields.io/travis/pke/react-extension-point.svg?style=flat-square)](https://travis-ci.org/pke/react-extension-point)
+[![npm](https://img.shields.io/npm/v/react-extension-point.svg?style=flat-square)](https://www.npmjs.com/package/react-extension-point)
+[![code coverage](https://img.shields.io/codecov/c/github/codecov/pke/react-extension-point.svg?style=flat-square)](https://codecov.io/gh/pke/react-extension-point)
+
 # React Extension Point
 
 Open your component for customisation deep in the component tree without adding new props via **Extensions** and **ExtensionPoints**.
@@ -292,3 +296,5 @@ In that case it would be better to render the `<quote>` only when there is an ex
   1. The name of the **ExtensionPoint**
   2. The props it hands to the **Extension**
   3. The default rendering if any
+
+[](https://img.shields.io/travis/pke/react-extension-point.svg)
