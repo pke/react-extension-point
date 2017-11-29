@@ -1,0 +1,74 @@
+{
+  "name": "react-extension-point",
+  "version": "1.0.0-rc1",
+  "description": "Provides code points to allow 3rd party code to extend your component",
+  "license": "MIT",
+  "author": "Philipp Kursawe <phil.kursawe+react-ep@gmail.com> (https://pke.github.com)",
+  "main": "lib/index.js",
+  "scripts": {
+    "preversion": "npm t",
+    "tap": "cross-env NODE_ENV=test nyc tap -R spec lib/**/*.spec.js",
+    "test": "npm run lint & npm run tap",
+    "lint": "eslint lib/**/*.js spec/**/*.js",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "readme": "README.md",
+  "homepage": "https://pke.github.io/react-extension-point",
+  "bugs": "https://github.com/pke/react-extenstion-point/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pke/react-extenstion-point"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "extension",
+    "extensibility"
+  ],
+  "nyc": {
+    "cache": true,
+    "require": [
+      "babel-register"
+    ],
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "invariant": "^2.2.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "faucet": "0.0.1",
+    "jsdom": "^11.4.0",
+    "nyc": "^11.3.0",
+    "react-styleguidist": "^6.0.33",
+    "styled-components": "^2.2.3",
+    "tap": "^10.7.3",
+    "webpack": "^3.8.1",
+    "webpack-blocks": "^1.0.0-rc.2"
+  }
+}

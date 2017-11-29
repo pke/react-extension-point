@@ -1,0 +1,13 @@
+form.login {
+  background-color: gray;
+  max-width: 200px;
+  padding: 1em;
+}
+
+form.login h2 {
+  margin-top: 0;
+}
+
+form.login > * {
+  display: block;
+}
