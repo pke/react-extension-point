@@ -15,14 +15,14 @@ const Greeting = () => (
       This is the default greeting, if no extension is registered
     </ExtensionPoint>
   </section>
-)
+);
 
 const App = ({ children, title }) => (
   <main>
     <h1>{title}</h1>
     <Greeting/>
   </main>
-)
+);
 
 const registry = createExtensionRegistry();
 registry.addExtension("Greeting", Hello);
@@ -32,7 +32,7 @@ registry.addExtension("Greeting", Hello);
 </ExtensionProvider>
 ```
 
-Without `ExtensionProvider` you have to hand down the extensions yourself thru the whole component hirarchy.
+Without `ExtensionProvider` you have to hand down the extensions yourself through the whole component hierarchy.
 
 ```js static
 const { createExtensionRegistry, ExtensionProvider } = require("..");
@@ -47,14 +47,14 @@ const Greeting = ({ registry }) => (
       This is the default greeting, if no extension is registered
     </ExtensionPoint>
   </section>
-)
+);
 
 const App = ({ children, title, registry }) => (
   <main>
     <h1>{title}</h1>
     <Greeting registry={registry}/>
   </main>
-)
+);
 
 const registry = createExtensionRegistry();
 registry.addExtension("Greeting", Hello);

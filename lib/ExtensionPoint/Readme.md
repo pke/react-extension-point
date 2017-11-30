@@ -38,7 +38,7 @@ const Hello = ({ text = "Hello from Extension"}) => (
 const registry = createExtensionRegistry();
 registry.addExtension("Hello", Hello);
 
-<ExtensionPoint registry={registry} extensionName="Hello" text="Bon jour!"/>
+<ExtensionPoint registry={registry} extensionName="Hello" text="Bonjour!"/>
 ```
 
 ```js
@@ -51,7 +51,7 @@ const Hello = ({ text = "Hello from Extension"}) => (
 const registry = createExtensionRegistry();
 registry.addExtension("Hello", Hello);
 
-<ExtensionPoint registry={registry} extensionName="Hello" text="Bon jour!">
+<ExtensionPoint registry={registry} extensionName="Hello" text="Bonjour!">
 {
   (Extension, props) => (
     Extension ? <strong><Extension {...props}/></strong> : null
