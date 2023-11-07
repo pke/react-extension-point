@@ -1,24 +1,28 @@
 {
-    "extends": [ "eslint:recommended", "plugin:react/recommended" ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true,
-            "restParams": true,
-            "spread": true
-        },
-        "sourceType": "module"
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "restParams": true,
+      "spread": true
     },
-    "env": {
-        "es6": true,
-        "node": true
-    },
-    "rules": {
-        "semi": "off"
-    },
-    "plugins": [
-        "react",
-        "import",
-        "jsx-a11y"
-    ]
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detects the React version
+    }
+  },
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"]
 }

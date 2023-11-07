@@ -1,11 +1,11 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
   "plugins": [
-    ["transform-object-rest-spread", { "useBuiltIns": true }]
+    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }]
   ],
   "env": {
     "test": {
-      "plugins": ["istanbul"]
+      // "plugins": ["babel-plugin-istanbul"]
     }
   }
 }
