@@ -1,7 +1,7 @@
-const { createConfig, babel, postcss } = require('webpack-blocks')
+const path = require('path');
 
 module.exports = {
-  title: "react Extension Point",
+  title: "React Extension Point",
   styleguideDir: "docs",
   sections: [
     {
@@ -16,8 +16,21 @@ module.exports = {
   showCode: true,
   showUsage: true,
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
-  webpackConfig: createConfig([
-    babel(),
-    postcss()
-  ])
-}
+  webpackConfig: {
+    entry: path.resolve(__dirname, './src/index.js'),
+    module: {
+      rules: [
+        {
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
+          test: /\.(scss|css)$/,
+          use: ['style-loader', 'css-loader', 'postcss-loader']
+        }
+      ]
+    },
+    // ... other webpack configuration
+  }
+};
